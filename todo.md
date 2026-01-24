@@ -7,3 +7,5 @@ e.g. `1_about`, `2_now`, `2_soon`, for logical grouping, then remove those from 
 - implement a way to use a json for global variables
 - figure out a way to implement a bottom margin
 - add a last updated footer
+- improve differentiation between directories, links, and files
+- add svg ::after external links
