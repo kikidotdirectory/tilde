@@ -42,6 +42,7 @@
       position: absolute;
       padding: 0em 1em;
       outline: 1px solid rgba(0,0,0,0.1);
+      z-index: 1;
     }
     .item * {
       width: max-content;
@@ -49,6 +50,9 @@
     .item img, .item video, .item audio {
       max-width: 18em;
       height: auto;
+    }
+    .item:has(img) {
+      z-index: 0;
     }
     .item audio {
       height: 3em;
@@ -127,6 +131,17 @@
     </div>
 
   </main>
+  <script>
+  <!--this snippet was borrowed from ryanyan.garden. thank you! -->
+      let currentZIndex = 1;
+
+      document.querySelectorAll('.item').forEach(item => {
+        item.addEventListener('mouseenter', () => {
+          currentZIndex++;
+          item.style.zIndex = currentZIndex;
+        });
+      });
+    </script>
 </body>
 <!--
 kevin.garden (natural template) by Kevin Chen, 2023-2025
