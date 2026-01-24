@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>file.gallery</title>
+  <title>tilde</title>
   <link rel="icon" type="image/png" href="/favicon.png">
-  <meta name="author" content="file.gallery">
-  <meta name="description" content="file.gallery is a site sown from files and directories.">
+  <meta name="author" content="tilde">
+  <meta name="description" content="tilde.kiki.directory is a site sown from files and directories.">
+  <link rel="stylesheet" href="/style.css">
 
   <style>
     html, body {
@@ -35,8 +36,9 @@
     .item {
       display: block;
       position: absolute;
-      padding: 0em 1em;
+      padding: 0.25em 1em;
       outline: 1px solid rgba(0,0,0,0.1);
+      z-index: 1;
     }
     .item * {
       width: max-content;
@@ -44,6 +46,9 @@
     .item img, .item video, .item audio {
       max-width: 18em;
       height: auto;
+    }
+    .item:has(img) {
+      z-index: 0;
     }
     .item audio {
       height: 3em;
@@ -65,6 +70,7 @@
     }
     .md h1, .md h2, .md h3, .md h4, .md h5, .md h6, .md p, .md pre {
       margin-top: 1em;
+      max-width: 34ch;
     }
   </style>
 </head>
@@ -72,145 +78,101 @@
 <body>
   <main>
 
-    <div class="plantbed" style="left: max(0px, calc(50% - 282.5px - 9em))">
-      <div class="item" style="top: 694px; left: 10px">
-        <h3><a href="⏰.md">⏰.md</a> (2.84kB)</h3>
+    <div class="plantbed" style="left: max(0px, calc(50% - 281.5px - 9em))">
+      <div class="item" style="top: 214px; left: 0px">
+        <h3><a href="about.md">about.md</a> (218B)</h3>
         <div class="md">
-          <!-- This lovely snippet was taken from [jake welch](https://jakewel.ch) -->
-<p><span id="current-time">It is currently <u><span id="current-time-time">[Current time will be inserted here]</span></u>
-    on
-    <br><u><span id="current-time-date">[Current date will be inserted here]</span></u>.</span>
-<br>
-<br>
-<span id="last-updated">This site was last updated
-    <br>at <u><span id="last-updated-time">[Time will be inserted here]</span></u>
-    on
-    <br><u><span id="last-updated-date">[Date will be inserted here]</span></u>.</span></p>
-<script>
-    function updateCurrentTime() {
-        const now = new Date();
-        const timeString = now.toLocaleString('en-US', {
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit'
-            });
-            const dateString = now.toLocaleString('en-US', {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-                });
-                document.getElementById('current-time-time').textContent = timeString;
-                document.getElementById('current-time-date').textContent = dateString;
-            }
-            async function setLastUpdated() {
-                try {
-                    const response = await fetch(window.location.href, { method: 'HEAD' });
-                    const lastModified = response.headers.get('Last-Modified');
-                    let lastUpdated;
-                    if (lastModified) {
-                        lastUpdated = new Date(lastModified);
-                        } else {
-                            lastUpdated = new Date();
-                        }
-                        const timeString = lastUpdated.toLocaleString('en-US', {
-                            hour: '2-digit',
-                            minute: '2-digit',
-                            second: '2-digit'
-                            });
-                            const dateString = lastUpdated.toLocaleString('en-US', {
-                                weekday: 'long',
-                                year: 'numeric',
-                                month: 'long',
-                                day: 'numeric'
-                                });
-                                document.getElementById('last-updated-time').textContent = timeString;
-                                document.getElementById('last-updated-date').textContent = dateString;
-                                } catch (error) {
-                                    const fallbackDate = new Date();
-                                    const timeString = fallbackDate.toLocaleString('en-US', {
-                                        hour: '2-digit',
-                                        minute: '2-digit',
-                                        second: '2-digit'
-                                        });
-                                        const dateString = fallbackDate.toLocaleString('en-US', {
-                                            weekday: 'long',
-                                            year: 'numeric',
-                                            month: 'long',
-                                            day: 'numeric'
-                                            });
-                                            document.getElementById('last-updated-time').textContent = timeString;
-                                            document.getElementById('last-updated-date').textContent = dateString;
-                                        }
-                                    }
-                                    setLastUpdated();
-                                    updateCurrentTime();
-                                    setInterval(updateCurrentTime, 1000);
-                                    document.querySelectorAll('.post img').forEach(img => {
-                                        img.style.cursor = 'pointer';
-                                        img.addEventListener('click', function (e) {
-                                            e.stopPropagation(); // Prevent event bubbling
-                                            window.open(this.src, '_blank');
-                                            });
-                                            });
-</script>
+          <p>tilde is the root of kiki.directory, the online space of kiki chang, who would like to thank you for visiting. </p>
+<p>this space is one of miscellaneous artifacts, byproducts of their online presence. please mind the mess.</p>
         </div>
       </div>
-      <div class="item" style="top: 980px; left: 404px">
+      <div class="item" style="top: 1056px; left: 88px">
+        <h3><a href="changes/">changes/</a> (3 items)</h3>
+      </div>
+      <div class="item" style="top: 726px; left: 293px">
         <h3><a href="credits.md">credits.md</a> (127B)</h3>
         <div class="md">
           <p><em>this site is built using <a href="https://file.gallery">file.gallery</a> by <a href="https://kevinnchen.com">kevin n. chen</a>. thank you kevin :)</em></p>
         </div>
       </div>
-      <div class="item" style="top: 968px; left: 483px">
+      <div class="item" style="top: 893px; left: 498px">
         <h3><a href="LICENSE">LICENSE</a> (11.4kB)</h3>
       </div>
-      <div class="item" style="top: 284px; left: 2px">
-        <h3><a href="loose-thoughts/">loose-thoughts/</a> (5 items)</h3>
+      <div class="item" style="top: 255px; left: 519px">
+        <h3><a href="loose-thoughts/">loose-thoughts/</a> (6 items)</h3>
       </div>
-      <div class="item" style="top: 175px; left: 1px">
+      <div class="item" style="top: 408px; left: 89px">
         <h3><a href="now.md">now.md</a> (83B)</h3>
         <div class="md">
           <p>self-learning</p>
 <p>typing on <a href="https://github.com/carrefinho/visorbearer">visorbearer</a>.</p>
         </div>
       </div>
-      <div class="item" style="top: 700px; left: 323px">
-        <h3><a href="online.md">online.md</a> (108B)</h3>
+      <div class="item" style="top: 136px; left: 80px">
+        <h3><a href="online.md">online.md</a> (112B)</h3>
         <div class="md">
-          <p><a href="https://www.are.na/kiki-chang-aq6ocvucluk/index">are.na</a>
+          <p><a href="https://www.are.na/kiki-chang-aq6ocvucluk/index">are.na</a><br>
 <a href="mailto:root@kiki.directory">root@kiki.directory</a></p>
         </div>
       </div>
-      <div class="item" style="top: 873px; left: 565px">
+      <div class="item" style="top: 573px; left: 88px">
+        <h3><a href="recently/">recently/</a> (5 items)</h3>
+      </div>
+      <div class="item" style="top: 499px; left: 89px">
+        <h3><a href="soon.md">soon.md</a> (176B)</h3>
+        <div class="md">
+          <p><a href="https://withfriends.events/event/IfGKzXyY/wordhack/">WordHack - Feb 19</a><br>
+<a href="https://withfriends.events/event/5XLrJ6Bj/web4-season-2/">Web4: The Offline Rabbit Hole - Feb 26</a></p>
+        </div>
+      </div>
+      <div class="item" style="top: 840px; left: 551px">
         <h3><a href="src/">src/</a> (2 items)</h3>
       </div>
-      <div class="item" style="top: 50px; left: 0px">
-        <h3>tilde</h3>
-        <pre>the root of me</pre>
+      <div class="item" style="top: 349px; left: 563px">
+        <h3><a href="statuses/">statuses/</a> (8 items)</h3>
       </div>
-      <div class="item" style="top: 816px; left: 322px">
-        <h3><a href="todo.md">todo.md</a> (132B)</h3>
+      <div class="item" style="top: 103px; left: 449px">
+        <h3><a href="style.css">style.css</a> (584B)</h3>
+      </div>
+      <div class="item" style="top: 50px; left: 3px">
+        <h3>tilde</h3>
+        <pre>√kiki
+</pre>
+      </div>
+      <div class="item" style="top: 810px; left: 89px">
+        <h3><a href="todo.md">todo.md</a> (368B)</h3>
         <div class="md">
           <p>some things i want to work on:</p>
 <ul>
 <li>have md or txt files generate a new page for writings</li>
 <li>can macos tags be parsed by cultivate.js?</li>
+<li>accessibility: modify script to allow for control of the DOM from Finder:
+e.g. <code>1_about</code>, <code>2_now</code>, <code>2_soon</code>, for logical grouping, then remove those from the title for the sighted.</li>
+<li>implement a way to use a json for global variables</li>
 </ul>
         </div>
       </div>
-      <div class="item" style="top: 834px; left: 447px">
+      <div class="item" style="top: 807px; left: 500px">
         <h3><a href="views/">views/</a> (2 items)</h3>
       </div>
-      <div class="item" style="top: 165px; left: 219px">
+      <div class="item" style="top: 135px; left: 230px">
         <h3><a href="visorbearer.jpeg">visorbearer.jpeg</a> (140kB)</h3>
         <a href="visorbearer.jpeg">
           <img src="visorbearer.jpeg" alt="visorbearer.jpeg" width="724" height="1086">
         </a>
       </div>
     </div>
-
   </main>
+  <script>
+    <!--this snippet was borrowed from ryanyan.garden. thank you! -->
+    let currentZIndex = 1;
+    document.querySelectorAll('.item').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        currentZIndex++;
+        item.style.zIndex = currentZIndex;
+      });
+    });
+  </script>
 </body>
 <!--
 kevin.garden (natural template) by Kevin Chen, 2023-2025

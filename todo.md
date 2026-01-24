@@ -5,3 +5,5 @@ some things i want to work on:
 - accessibility: modify script to allow for control of the DOM from Finder:
 e.g. `1_about`, `2_now`, `2_soon`, for logical grouping, then remove those from the title for the sighted.
 - implement a way to use a json for global variables
+- figure out a way to implement a bottom margin
+- add a last updated footer

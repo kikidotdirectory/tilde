@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>file.gallery/views/</title>
+  <title>tilde/views/</title>
   <link rel="icon" type="image/png" href="/favicon.png">
-  <meta name="author" content="file.gallery">
-  <meta name="description" content="file.gallery is a site sown from files and directories.">
+  <meta name="author" content="tilde">
+  <meta name="description" content="tilde.kiki.directory is a site sown from files and directories.">
+  <link rel="stylesheet" href="/style.css">
 
   <style>
     html, body {
@@ -35,8 +36,9 @@
     .item {
       display: block;
       position: absolute;
-      padding: 0em 1em;
+      padding: 0.25em 1em;
       outline: 1px solid rgba(0,0,0,0.1);
+      z-index: 1;
     }
     .item * {
       width: max-content;
@@ -44,6 +46,9 @@
     .item img, .item video, .item audio {
       max-width: 18em;
       height: auto;
+    }
+    .item:has(img) {
+      z-index: 0;
     }
     .item audio {
       height: 3em;
@@ -65,6 +70,7 @@
     }
     .md h1, .md h2, .md h3, .md h4, .md h5, .md h6, .md p, .md pre {
       margin-top: 1em;
+      max-width: 34ch;
     }
   </style>
 </head>
@@ -76,25 +82,23 @@
 
     <div class="plantbed" style="left: max(0px, calc(50% - 76px - 9em))">
       <div class="item" style="top: 139px; left: 0px">
-        <h3><a href="formal.ejs">formal.ejs</a> (4.17kB)</h3>
+        <h3><a href="formal.ejs">formal.ejs</a> (4.26kB)</h3>
       </div>
       <div class="item" style="top: 50px; left: 152px">
-        <h3><a href="natural.ejs">natural.ejs</a> (4.45kB)</h3>
+        <h3><a href="natural.ejs">natural.ejs</a> (4.89kB)</h3>
       </div>
     </div>
-
   </main>
   <script>
-  <!--this snippet was borrowed from ryanyan.garden. thank you! -->
-      let currentZIndex = 1;
-
-      document.querySelectorAll('.item').forEach(item => {
-        item.addEventListener('mouseenter', () => {
-          currentZIndex++;
-          item.style.zIndex = currentZIndex;
-        });
+    <!--this snippet was borrowed from ryanyan.garden. thank you! -->
+    let currentZIndex = 1;
+    document.querySelectorAll('.item').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        currentZIndex++;
+        item.style.zIndex = currentZIndex;
       });
-    </script>
+    });
+  </script>
 </body>
 <!--
 kevin.garden (natural template) by Kevin Chen, 2023-2025
