@@ -72,7 +72,7 @@
     <% } _%>
 
     <div class="plantbed">
-      <%_ files.forEach(function(file) { _%>
+      <%_ files.slice().reverse().forEach(function(file) { _%>
       <div class="item">
         <%_ if (file.type === 'directory') { _%>
         <h3><a href="<%= file.path %>"><%= file.name %></a> (<%= file.contents %>)</h3>
