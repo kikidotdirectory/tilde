@@ -1,0 +1,3 @@
+- add background noise
+- use ryan yan's z-index function to have images always be in the back unless hovered
+- `formal` collections are organized in reverse so that ISO-formatted dates are in reverse chronological order (newest first) (that is also why the files in here are named weirdly)

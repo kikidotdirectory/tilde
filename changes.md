@@ -1,2 +1,0 @@
-- add .md max-width
-- 
