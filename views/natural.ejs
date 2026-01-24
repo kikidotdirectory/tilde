@@ -129,19 +129,17 @@
       </div>
       <%_ }) _%>
     </div>
-
   </main>
   <script>
-  <!--this snippet was borrowed from ryanyan.garden. thank you! -->
-      let currentZIndex = 1;
-
-      document.querySelectorAll('.item').forEach(item => {
-        item.addEventListener('mouseenter', () => {
-          currentZIndex++;
-          item.style.zIndex = currentZIndex;
-        });
+    <!--this snippet was borrowed from ryanyan.garden. thank you! -->
+    let currentZIndex = 1;
+    document.querySelectorAll('.item').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        currentZIndex++;
+        item.style.zIndex = currentZIndex;
       });
-    </script>
+    });
+  </script>
 </body>
 <!--
 kevin.garden (natural template) by Kevin Chen, 2023-2025
