@@ -72,19 +72,137 @@
 <body>
   <main>
 
-    <div class="plantbed" style="left: max(0px, calc(50% - 42.5px - 9em))">
-      <div class="item" style="top: 466px; left: 52px">
-        <h3><a href="about.md">about.md</a> (37B)</h3>
+    <div class="plantbed" style="left: max(0px, calc(50% - 282.5px - 9em))">
+      <div class="item" style="top: 694px; left: 10px">
+        <h3><a href="⏰.md">⏰.md</a> (2.84kB)</h3>
         <div class="md">
-          <p>kiki.directory is a temporary space.</p>
+          <!-- This lovely snippet was taken from [jake welch](https://jakewel.ch) -->
+<p><span id="current-time">It is currently <u><span id="current-time-time">[Current time will be inserted here]</span></u>
+    on
+    <br><u><span id="current-time-date">[Current date will be inserted here]</span></u>.</span>
+<br>
+<br>
+<span id="last-updated">This site was last updated
+    <br>at <u><span id="last-updated-time">[Time will be inserted here]</span></u>
+    on
+    <br><u><span id="last-updated-date">[Date will be inserted here]</span></u>.</span></p>
+<script>
+    function updateCurrentTime() {
+        const now = new Date();
+        const timeString = now.toLocaleString('en-US', {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+            });
+            const dateString = now.toLocaleString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+                });
+                document.getElementById('current-time-time').textContent = timeString;
+                document.getElementById('current-time-date').textContent = dateString;
+            }
+            async function setLastUpdated() {
+                try {
+                    const response = await fetch(window.location.href, { method: 'HEAD' });
+                    const lastModified = response.headers.get('Last-Modified');
+                    let lastUpdated;
+                    if (lastModified) {
+                        lastUpdated = new Date(lastModified);
+                        } else {
+                            lastUpdated = new Date();
+                        }
+                        const timeString = lastUpdated.toLocaleString('en-US', {
+                            hour: '2-digit',
+                            minute: '2-digit',
+                            second: '2-digit'
+                            });
+                            const dateString = lastUpdated.toLocaleString('en-US', {
+                                weekday: 'long',
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
+                                });
+                                document.getElementById('last-updated-time').textContent = timeString;
+                                document.getElementById('last-updated-date').textContent = dateString;
+                                } catch (error) {
+                                    const fallbackDate = new Date();
+                                    const timeString = fallbackDate.toLocaleString('en-US', {
+                                        hour: '2-digit',
+                                        minute: '2-digit',
+                                        second: '2-digit'
+                                        });
+                                        const dateString = fallbackDate.toLocaleString('en-US', {
+                                            weekday: 'long',
+                                            year: 'numeric',
+                                            month: 'long',
+                                            day: 'numeric'
+                                            });
+                                            document.getElementById('last-updated-time').textContent = timeString;
+                                            document.getElementById('last-updated-date').textContent = dateString;
+                                        }
+                                    }
+                                    setLastUpdated();
+                                    updateCurrentTime();
+                                    setInterval(updateCurrentTime, 1000);
+                                    document.querySelectorAll('.post img').forEach(img => {
+                                        img.style.cursor = 'pointer';
+                                        img.addEventListener('click', function (e) {
+                                            e.stopPropagation(); // Prevent event bubbling
+                                            window.open(this.src, '_blank');
+                                            });
+                                            });
+</script>
         </div>
       </div>
-      <div class="item" style="top: 547px; left: 85px">
-        <h3>last updated</h3>
-        <pre>2026-01-21
-</pre>
+      <div class="item" style="top: 980px; left: 404px">
+        <h3><a href="credits.md">credits.md</a> (127B)</h3>
+        <div class="md">
+          <p><em>this site is built using <a href="https://file.gallery">file.gallery</a> by <a href="https://kevinnchen.com">kevin n. chen</a>. thank you kevin :)</em></p>
+        </div>
+      </div>
+      <div class="item" style="top: 968px; left: 483px">
+        <h3><a href="LICENSE">LICENSE</a> (11.4kB)</h3>
+      </div>
+      <div class="item" style="top: 284px; left: 2px">
+        <h3><a href="loose-thoughts/">loose-thoughts/</a> (5 items)</h3>
+      </div>
+      <div class="item" style="top: 175px; left: 1px">
+        <h3><a href="now.md">now.md</a> (83B)</h3>
+        <div class="md">
+          <p>self-learning</p>
+<p>typing on <a href="https://github.com/carrefinho/visorbearer">visorbearer</a>.</p>
+        </div>
+      </div>
+      <div class="item" style="top: 700px; left: 323px">
+        <h3><a href="online.md">online.md</a> (108B)</h3>
+        <div class="md">
+          <p><a href="https://www.are.na/kiki-chang-aq6ocvucluk/index">are.na</a>
+<a href="mailto:root@kiki.directory">root@kiki.directory</a></p>
+        </div>
+      </div>
+      <div class="item" style="top: 873px; left: 565px">
+        <h3><a href="src/">src/</a> (2 items)</h3>
       </div>
       <div class="item" style="top: 50px; left: 0px">
+        <h3>tilde</h3>
+        <pre>the root of me</pre>
+      </div>
+      <div class="item" style="top: 816px; left: 322px">
+        <h3><a href="todo.md">todo.md</a> (132B)</h3>
+        <div class="md">
+          <p>some things i want to work on:</p>
+<ul>
+<li>have md or txt files generate a new page for writings</li>
+<li>can macos tags be parsed by cultivate.js?</li>
+</ul>
+        </div>
+      </div>
+      <div class="item" style="top: 834px; left: 447px">
+        <h3><a href="views/">views/</a> (2 items)</h3>
+      </div>
+      <div class="item" style="top: 165px; left: 219px">
         <h3><a href="visorbearer.jpeg">visorbearer.jpeg</a> (140kB)</h3>
         <a href="visorbearer.jpeg">
           <img src="visorbearer.jpeg" alt="visorbearer.jpeg" width="724" height="1086">
