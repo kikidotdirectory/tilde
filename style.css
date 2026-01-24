@@ -6,6 +6,10 @@
   background-color: #fff;
 }
 
+body {
+  padding-bottom: 4rem;
+}
+
 .item::before,
 body::before {
   content: "";
