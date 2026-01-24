@@ -9,9 +9,14 @@
   max-width: 34ch;
 }
 
+.item {
+  background-color: #fff;
+}
+
+.item::before,
 body::before {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
