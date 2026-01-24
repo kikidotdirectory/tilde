@@ -9,3 +9,6 @@ e.g. `1_about`, `2_now`, `2_soon`, for logical grouping, then remove those from 
 - add a last updated footer
 - improve differentiation between directories, links, and files
 - add svg ::after external links
+- add 404
+- adjust the list styling…
+ 
