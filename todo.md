@@ -1,14 +1,16 @@
-some things i want to work on:
+# styling
 
-- have md or txt files generate a new page for writings
-- can macos tags be parsed by cultivate.js?
-- accessibility: modify script to allow for control of the DOM from Finder:
-e.g. `1_about`, `2_now`, `2_soon`, for logical grouping, then remove those from the title for the sighted.
-- implement a way to use a json for global variables
-- figure out a way to implement a bottom margin
-- add a last updated footer
-- improve differentiation between directories, links, and files
-- add svg ::after external links
-- add 404
-- adjust the list styling…
- 
+- adjust list spacings
+- add a bottom margin
+- improve differentiation between files, directories, and links
+
+# site
+
+- add last updated
+- add 404 page
+
+# file.gallery
+
+- json for global variables?
+- generate new pages for writings?
+- build a visual editor in browser to configure .garden_store (aria labels?, hierachies, headings, rearranging array)
