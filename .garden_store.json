@@ -1,0 +1,198 @@
+{
+  "sort_order": "custom",
+  "files": [
+    {
+      "path": "tilde",
+      "name": "tilde",
+      "size": "8B",
+      "type": "raw",
+      "contents": "√kiki\n",
+      "location": {
+        "x": 240,
+        "y": 65
+      }
+    },
+    {
+      "path": "about.md",
+      "name": "about.md",
+      "size": "218B",
+      "type": "markdown",
+      "contents": "<p>tilde is the root of kiki.directory, the online space of kiki chang, who would like to thank you for visiting. </p>\n<p>this space is one of miscellaneous artifacts, byproducts of their online presence. please mind the mess.</p>\n",
+      "location": {
+        "x": 169,
+        "y": 213
+      }
+    },
+    {
+      "path": "online.md",
+      "name": "online.md",
+      "size": "112B",
+      "type": "markdown",
+      "contents": "<p><a href=\"https://www.are.na/kiki-chang-aq6ocvucluk/index\">are.na</a><br>\n<a href=\"mailto:root@kiki.directory\">root@kiki.directory</a></p>\n",
+      "location": {
+        "x": 239,
+        "y": 136
+      }
+    },
+    {
+      "path": "visorbearer.jpeg",
+      "name": "visorbearer.jpeg",
+      "size": "140kB",
+      "type": "image",
+      "width": 724,
+      "height": 1086,
+      "location": {
+        "x": 391,
+        "y": 137
+      }
+    },
+    {
+      "path": "now.md",
+      "name": "now.md",
+      "size": "83B",
+      "type": "markdown",
+      "contents": "<p>self-learning</p>\n<p>typing on <a href=\"https://github.com/carrefinho/visorbearer\">visorbearer</a>.</p>\n",
+      "location": {
+        "x": 255,
+        "y": 393
+      }
+    },
+    {
+      "path": "soon.md",
+      "name": "soon.md",
+      "size": "176B",
+      "type": "markdown",
+      "contents": "<p><a href=\"https://withfriends.events/event/IfGKzXyY/wordhack/\">WordHack - Feb 19</a><br>\n<a href=\"https://withfriends.events/event/5XLrJ6Bj/web4-season-2/\">Web4: The Offline Rabbit Hole - Feb 26</a></p>\n",
+      "location": {
+        "x": 254,
+        "y": 487
+      }
+    },
+    {
+      "path": "recently/",
+      "name": "recently/",
+      "type": "directory",
+      "contents": "5 items",
+      "location": {
+        "x": 254,
+        "y": 563
+      }
+    },
+    {
+      "path": "loose-thoughts/",
+      "name": "loose-thoughts/",
+      "type": "directory",
+      "contents": "6 items",
+      "location": {
+        "x": 645,
+        "y": 107
+      }
+    },
+    {
+      "path": "statuses/",
+      "name": "statuses/",
+      "type": "directory",
+      "contents": "8 items",
+      "location": {
+        "x": 730,
+        "y": 143
+      }
+    },
+    {
+      "path": "2026-01-24 at 03.36.13@2x.png",
+      "name": "2026-01-24 at 03.36.13@2x.png",
+      "size": "1.02MB",
+      "type": "image",
+      "width": 2346,
+      "height": 2516,
+      "location": {
+        "x": 596,
+        "y": 549
+      }
+    },
+    {
+      "path": "todo.md",
+      "name": "todo.md",
+      "size": "581B",
+      "type": "markdown",
+      "contents": "<p>some things i want to work on:</p>\n<ul>\n<li>have md or txt files generate a new page for writings</li>\n<li>can macos tags be parsed by cultivate.js?</li>\n<li>accessibility: modify script to allow for control of the DOM from Finder:\ne.g. <code>1_about</code>, <code>2_now</code>, <code>2_soon</code>, for logical grouping, then remove those from the title for the sighted.</li>\n<li>implement a way to use a json for global variables</li>\n<li>figure out a way to implement a bottom margin</li>\n<li>add a last updated footer</li>\n<li>improve differentiation between directories, links, and files</li>\n<li>add svg ::after external links</li>\n<li>add 404</li>\n<li>adjust the list styling…</li>\n</ul>\n",
+      "location": {
+        "x": 256,
+        "y": 712
+      }
+    },
+    {
+      "path": "changes/",
+      "name": "changes/",
+      "type": "directory",
+      "contents": "3 items",
+      "location": {
+        "x": 253,
+        "y": 1071
+      }
+    },
+    {
+      "path": "credits.md",
+      "name": "credits.md",
+      "size": "127B",
+      "type": "markdown",
+      "contents": "<p><em>this site is built using <a href=\"https://file.gallery\">file.gallery</a> by <a href=\"https://kevinnchen.com\">kevin n. chen</a>. thank you kevin :)</em></p>\n",
+      "location": {
+        "x": 598,
+        "y": 870
+      }
+    },
+    {
+      "path": "src/",
+      "name": "src/",
+      "type": "directory",
+      "contents": "2 items",
+      "location": {
+        "x": 749,
+        "y": 976
+      }
+    },
+    {
+      "path": "views/",
+      "name": "views/",
+      "type": "directory",
+      "contents": "2 items",
+      "location": {
+        "x": 700,
+        "y": 947
+      }
+    },
+    {
+      "path": "LICENSE",
+      "name": "LICENSE",
+      "size": "11.4kB",
+      "type": "other",
+      "location": {
+        "x": 690,
+        "y": 1003
+      }
+    },
+    {
+      "path": "favicon.svg",
+      "name": "favicon.svg",
+      "size": "811B",
+      "type": "image",
+      "width": 32,
+      "height": 32,
+      "location": {
+        "x": 677,
+        "y": 483
+      }
+    },
+    {
+      "path": "style.css",
+      "name": "style.css",
+      "size": "584B",
+      "type": "other",
+      "location": {
+        "x": 716,
+        "y": 455
+      }
+    }
+  ]
+}

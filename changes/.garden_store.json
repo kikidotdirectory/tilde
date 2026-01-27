@@ -1,0 +1,26 @@
+{
+  "sort_order": "alphanumeric",
+  "files": [
+    {
+      "path": "_layout.md",
+      "name": "_layout.md",
+      "size": "290B",
+      "type": "markdown",
+      "contents": "<ul>\n<li>add background noise</li>\n<li>use ryan yan&#39;s z-index function to have images always be in the back unless hovered</li>\n<li><code>formal</code> collections are organized in reverse so that ISO-formatted dates are in reverse chronological order (newest first) (that is also why the files in here are named weirdly)</li>\n</ul>\n"
+    },
+    {
+      "path": "_markdown.md",
+      "name": "_markdown.md",
+      "size": "25B",
+      "type": "markdown",
+      "contents": "<ul>\n<li>add max width for text</li>\n</ul>\n"
+    },
+    {
+      "path": "changes.md",
+      "name": "changes.md",
+      "size": "178B",
+      "type": "markdown",
+      "contents": "<p>this directory serves as a list of changes i&#39;ve made to my version of <a href=\"file.gallery\">file.gallery</a>. i have it here for my own documentation but i hope you find it interesting :)</p>\n"
+    }
+  ]
+}

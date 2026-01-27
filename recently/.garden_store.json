@@ -1,0 +1,43 @@
+{
+  "sort_order": "alphanumeric",
+  "files": [
+    {
+      "path": "2025-12-18..",
+      "name": "2025-12-18..",
+      "size": "9B",
+      "type": "raw",
+      "contents": "WordHack\n"
+    },
+    {
+      "path": "2025-12-18_chia.jpeg",
+      "name": "2025-12-18_chia.jpeg",
+      "size": "1.98MB",
+      "type": "image",
+      "width": 4032,
+      "height": 3024
+    },
+    {
+      "path": "2025-12-18_collato.jpeg",
+      "name": "2025-12-18_collato.jpeg",
+      "size": "2.82MB",
+      "type": "image",
+      "width": 4032,
+      "height": 3024
+    },
+    {
+      "path": "2025-12-18_udder-mayhem.jpeg",
+      "name": "2025-12-18_udder-mayhem.jpeg",
+      "size": "2.96MB",
+      "type": "image",
+      "width": 4032,
+      "height": 3024
+    },
+    {
+      "path": "2025-12-18_wordhack.md",
+      "name": "2025-12-18_wordhack.md",
+      "size": "89B",
+      "type": "markdown",
+      "contents": "<p>&quot;i aspire for a web that makes it feel like you can live through it&quot;<br>\n- chia amisola</p>\n"
+    }
+  ]
+}
