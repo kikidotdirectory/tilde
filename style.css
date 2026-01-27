@@ -35,3 +35,17 @@ body::before {
   pointer-events: none;
   z-index: -1;
 }
+
+@media only screen and (max-width: 760px) {
+  .plantbed {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item {
+    position: static;
+    left: 0 !important;
+    top: 0 !important;
+    width: fit-content;
+  }
+}
