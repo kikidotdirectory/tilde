@@ -91,6 +91,18 @@
 </ul>
         </div>
       </div>
+      <div class="item">
+        <h3><a href="_garden_store.md">_garden_store.md</a> (1.18kB)</h3>
+        <div class="md">
+          <p>inspired by the .DS_Store that file.gallery is built on</p>
+<p>currently, file.gallery has no way of knowing how files should be ordered semantically. the current implementation organizes them alphanumerically which is works for formal compositions but results in a nonintuitive DOM for natural layouts</p>
+<p><code>.garden_store.json</code> allows file.gallery to remember the intended DOM order of files and directories. the json stores a sort-order for each directory along with a copy of the processedFiles array used in cultivate.js. </p>
+<p>by default, it will retain the alphanumeric order and simply be rewritten everytime <code>npm run cultivate</code> is run but if <code>sort-order</code> is set to <code>custom</code>, it will respect the order that is set, adding new items to the end and removing items that are no longer visible to cultivate.js.</p>
+<h1>todo</h1>
+<p>i plan to add some additional filters that can be set like reverse-alpha or date. i&#39;m not sure if that can be done through finder itself but this was the best solution i could think of to set semantic ordering, which was my priority</p>
+<p>i want to make a gui that allows for things like adding aria labels, rearranging the order of the items, or adding custom attributes.</p>
+        </div>
+      </div>
     </div>
 
   </main>

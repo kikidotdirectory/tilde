@@ -10,10 +10,8 @@
   <meta name="author" content="tilde">
   <meta name="description" content="tilde.kiki.directory is a site sown from files and directories.">
   <link rel="stylesheet" href="/style.css">
-
   <style>
     html, body {
-      height: 100%;
       margin: 0;
       text-size-adjust: none;
       -webkit-text-size-adjust: 100%;
@@ -24,33 +22,22 @@
       overflow-x: scroll;
     }
     main {
-      max-width: 100%;
       box-sizing: border-box;
-      align-items: center;
       padding: 1.5em;
     }
-    .plantbed {
-      width: 0;
-      position: relative;
-    }
     .item {
-      display: block;
-      position: absolute;
+      display: inline-block;
+      position: relative;
       padding: 0.25em 1em;
-      outline: 1px solid rgba(0,0,0,0.1);
-      z-index: 1;
+      margin: 1em 0;
+      border: 1px solid rgba(0,0,0,.1);
     }
-    .item * {
-      width: max-content;
-    }
-    .item img, .item video, .item audio {
-      max-width: 18em;
-      height: auto;
-    }
-    .item:has(img) {
-      z-index: 0;
+    .item img, .item video {
+      width: auto; height: auto;
+      max-width: 28em; max-height: 26em;
     }
     .item audio {
+      max-width: 18em;
       height: 3em;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -70,7 +57,6 @@
     }
     .md h1, .md h2, .md h3, .md h4, .md h5, .md h6, .md p, .md pre {
       margin-top: 1em;
-      max-width: 34ch;
     }
   </style>
 </head>
@@ -78,126 +64,123 @@
 <body>
   <main>
 
-    <div class="plantbed" style="left: max(0px, calc(50% - 290px - 9em))">
-      <div class="item" style="top: 50px; left: 71px">
-        <h3>tilde</h3>
-        <pre>√kiki
-</pre>
-      </div>
-      <div class="item" style="top: 198px; left: 0px">
-        <h3><a href="about.md">about.md</a> (218B)</h3>
-        <div class="md">
-          <p>tilde is the root of kiki.directory, the online space of kiki chang, who would like to thank you for visiting. </p>
-<p>this space is one of miscellaneous artifacts, byproducts of their online presence. please mind the mess.</p>
-        </div>
-      </div>
-      <div class="item" style="top: 121px; left: 70px">
-        <h3><a href="online.md">online.md</a> (112B)</h3>
-        <div class="md">
-          <p><a href="https://www.are.na/kiki-chang-aq6ocvucluk/index">are.na</a><br>
-<a href="mailto:root@kiki.directory">root@kiki.directory</a></p>
-        </div>
-      </div>
-      <div class="item" style="top: 122px; left: 222px">
-        <h3><a href="visorbearer.jpeg">visorbearer.jpeg</a> (140kB)</h3>
-        <a href="visorbearer.jpeg">
-          <img src="visorbearer.jpeg" alt="visorbearer.jpeg" width="724" height="1086">
-        </a>
-      </div>
-      <div class="item" style="top: 378px; left: 86px">
-        <h3><a href="now.md">now.md</a> (83B)</h3>
-        <div class="md">
-          <p>self-learning</p>
-<p>typing on <a href="https://github.com/carrefinho/visorbearer">visorbearer</a>.</p>
-        </div>
-      </div>
-      <div class="item" style="top: 472px; left: 85px">
-        <h3><a href="soon.md">soon.md</a> (176B)</h3>
-        <div class="md">
-          <p><a href="https://withfriends.events/event/IfGKzXyY/wordhack/">WordHack - Feb 19</a><br>
-<a href="https://withfriends.events/event/5XLrJ6Bj/web4-season-2/">Web4: The Offline Rabbit Hole - Feb 26</a></p>
-        </div>
-      </div>
-      <div class="item" style="top: 548px; left: 85px">
-        <h3><a href="recently/">recently/</a> (5 items)</h3>
-      </div>
-      <div class="item" style="top: 92px; left: 476px">
-        <h3><a href="loose-thoughts/">loose-thoughts/</a> (6 items)</h3>
-      </div>
-      <div class="item" style="top: 128px; left: 561px">
-        <h3><a href="statuses/">statuses/</a> (8 items)</h3>
-      </div>
-      <div class="item" style="top: 534px; left: 427px">
-        <h3><a href="2026-01-24 at 03.36.13@2x.png">2026-01-24 at 03.36.13@2x.png</a> (1.02MB)</h3>
-        <a href="2026-01-24 at 03.36.13@2x.png">
-          <img src="2026-01-24 at 03.36.13@2x.png" alt="2026-01-24 at 03.36.13@2x.png" width="2346" height="2516">
-        </a>
-      </div>
-      <div class="item" style="top: 697px; left: 87px">
-        <h3><a href="todo.md">todo.md</a> (353B)</h3>
-        <div class="md">
-          <p>some things i want to work on:</p>
-<ul>
-<li>have md or txt files generate a new page for writings</li>
-<li>implement a way to use a json for global variables</li>
-<li>figure out a way to implement a bottom margin</li>
-<li>add a last updated footer</li>
-<li>improve differentiation between directories, links, and files</li>
-<li>add svg ::after external links</li>
-<li>add 404</li>
-<li>adjust the list styling…</li>
-</ul>
-        </div>
-      </div>
-      <div class="item" style="top: 1100px; left: 84px">
-        <h3><a href="changes/">changes/</a> (3 items)</h3>
-      </div>
-      <div class="item" style="top: 855px; left: 429px">
-        <h3><a href="credits.md">credits.md</a> (127B)</h3>
-        <div class="md">
-          <p><em>this site is built using <a href="https://file.gallery">file.gallery</a> by <a href="https://kevinnchen.com">kevin n. chen</a>. thank you kevin :)</em></p>
-        </div>
-      </div>
-      <div class="item" style="top: 961px; left: 580px">
-        <h3><a href="src/">src/</a> (2 items)</h3>
-      </div>
-      <div class="item" style="top: 932px; left: 531px">
-        <h3><a href="views/">views/</a> (2 items)</h3>
-      </div>
-      <div class="item" style="top: 988px; left: 521px">
-        <h3><a href="LICENSE">LICENSE</a> (11.4kB)</h3>
-      </div>
-      <div class="item" style="top: 468px; left: 508px">
-        <h3><a href="favicon.svg">favicon.svg</a> (811B)</h3>
-        <a href="favicon.svg">
-          <img src="favicon.svg" alt="favicon.svg" width="32" height="32">
-        </a>
-      </div>
-      <div class="item" style="top: 440px; left: 547px">
-        <h3><a href="style.css">style.css</a> (804B)</h3>
-      </div>
-      <div class="item" style="top: 960px; left: 85px">
+    <div class="plantbed">
+      <div class="item">
         <h3><a href="changelog.md">changelog.md</a> (126B)</h3>
         <div class="md">
           <p><em>2025.01.26</em><br>
 implemented .garden_store.json which allows file.gallery to be responsive and should help with accessibility</p>
         </div>
       </div>
+      <div class="item">
+        <h3><a href="style.css">style.css</a> (832B)</h3>
+      </div>
+      <div class="item">
+        <h3><a href="favicon.svg">favicon.svg</a> (811B)</h3>
+        <a href="favicon.svg">
+          <img src="favicon.svg" alt="favicon.svg" width="32" height="32">
+        </a>
+      </div>
+      <div class="item">
+        <h3><a href="LICENSE">LICENSE</a> (11.4kB)</h3>
+      </div>
+      <div class="item">
+        <h3><a href="views/">views/</a> (2 items)</h3>
+      </div>
+      <div class="item">
+        <h3><a href="src/">src/</a> (2 items)</h3>
+      </div>
+      <div class="item">
+        <h3><a href="credits.md">credits.md</a> (127B)</h3>
+        <div class="md">
+          <p><em>this site is built using <a href="https://file.gallery">file.gallery</a> by <a href="https://kevinnchen.com">kevin n. chen</a>. thank you kevin :)</em></p>
+        </div>
+      </div>
+      <div class="item">
+        <h3><a href="changes/">changes/</a> (4 items)</h3>
+      </div>
+      <div class="item">
+        <h3><a href="todo.md">todo.md</a> (362B)</h3>
+        <div class="md">
+          <h1>styling</h1>
+<ul>
+<li>adjust list spacings</li>
+<li>add a bottom margin</li>
+<li>improve differentiation between files, directories, and links</li>
+</ul>
+<h1>site</h1>
+<ul>
+<li>add last updated</li>
+<li>add 404 page</li>
+</ul>
+<h1>file.gallery</h1>
+<ul>
+<li>json for global variables?</li>
+<li>generate new pages for writings?</li>
+<li>build a visual editor in browser to configure .garden_store (aria labels?, hierachies, headings, rearranging array)</li>
+</ul>
+        </div>
+      </div>
+      <div class="item">
+        <h3><a href="2026-01-24 at 03.36.13@2x.png">2026-01-24 at 03.36.13@2x.png</a> (1.02MB)</h3>
+        <a href="2026-01-24 at 03.36.13@2x.png">
+          <img src="2026-01-24 at 03.36.13@2x.png" alt="2026-01-24 at 03.36.13@2x.png" width="2346" height="2516">
+        </a>
+      </div>
+      <div class="item">
+        <h3><a href="statuses/">statuses/</a> (8 items)</h3>
+      </div>
+      <div class="item">
+        <h3><a href="loose-thoughts/">loose-thoughts/</a> (6 items)</h3>
+      </div>
+      <div class="item">
+        <h3><a href="recently/">recently/</a> (5 items)</h3>
+      </div>
+      <div class="item">
+        <h3><a href="soon.md">soon.md</a> (176B)</h3>
+        <div class="md">
+          <p><a href="https://withfriends.events/event/IfGKzXyY/wordhack/">WordHack - Feb 19</a><br>
+<a href="https://withfriends.events/event/5XLrJ6Bj/web4-season-2/">Web4: The Offline Rabbit Hole - Feb 26</a></p>
+        </div>
+      </div>
+      <div class="item">
+        <h3><a href="now.md">now.md</a> (83B)</h3>
+        <div class="md">
+          <p>self-learning</p>
+<p>typing on <a href="https://github.com/carrefinho/visorbearer">visorbearer</a>.</p>
+        </div>
+      </div>
+      <div class="item">
+        <h3><a href="visorbearer.jpeg">visorbearer.jpeg</a> (140kB)</h3>
+        <a href="visorbearer.jpeg">
+          <img src="visorbearer.jpeg" alt="visorbearer.jpeg" width="724" height="1086">
+        </a>
+      </div>
+      <div class="item">
+        <h3><a href="online.md">online.md</a> (112B)</h3>
+        <div class="md">
+          <p><a href="https://www.are.na/kiki-chang-aq6ocvucluk/index">are.na</a><br>
+<a href="mailto:root@kiki.directory">root@kiki.directory</a></p>
+        </div>
+      </div>
+      <div class="item">
+        <h3><a href="about.md">about.md</a> (218B)</h3>
+        <div class="md">
+          <p>tilde is the root of kiki.directory, the online space of kiki chang, who would like to thank you for visiting. </p>
+<p>this space is one of miscellaneous artifacts, byproducts of their online presence. please mind the mess.</p>
+        </div>
+      </div>
+      <div class="item">
+        <h3>tilde</h3>
+        <pre>√kiki
+</pre>
+      </div>
     </div>
+
   </main>
-  <script>
-    <!--this snippet was borrowed from ryanyan.garden. thank you! -->
-    let currentZIndex = 1;
-    document.querySelectorAll('.item').forEach(item => {
-      item.addEventListener('mouseenter', () => {
-        currentZIndex++;
-        item.style.zIndex = currentZIndex;
-      });
-    });
-  </script>
 </body>
 <!--
-kevin.garden (natural template) by Kevin Chen, 2023-2025
+kevin.garden (formal template) by Kevin Chen, 2023-2025
 licensed under CC BY-NC 4.0: https://creativecommons.org/licenses/by-nc/4.0/
 please link to https://kevin.garden/ or https://file.gallery/, if possible
 attribution only in the html source is sufficient. non-commercial use only :)
