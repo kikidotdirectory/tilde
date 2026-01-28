@@ -128,7 +128,7 @@
       "contents": "4 items",
       "location": {
         "x": 253,
-        "y": 1071
+        "y": 1115
       }
     },
     {
@@ -199,7 +199,11 @@
       "name": "changelog.md",
       "size": "126B",
       "type": "markdown",
-      "contents": "<p><em>2025.01.26</em><br>\nimplemented .garden_store.json which allows file.gallery to be responsive and should help with accessibility</p>\n"
+      "contents": "<p><em>2025.01.26</em><br>\nimplemented .garden_store.json which allows file.gallery to be responsive and should help with accessibility</p>\n",
+      "location": {
+        "x": 253,
+        "y": 971
+      }
     }
   ]
 }
