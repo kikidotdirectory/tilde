@@ -75,7 +75,7 @@
       "contents": "5 items",
       "location": {
         "x": 257,
-        "y": 620
+        "y": 606
       }
     },
     {
@@ -92,7 +92,7 @@
       "path": "statuses/",
       "name": "statuses/",
       "type": "directory",
-      "contents": "10 items",
+      "contents": "11 items",
       "location": {
         "x": 730,
         "y": 143
