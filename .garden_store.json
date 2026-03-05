@@ -49,9 +49,9 @@
     {
       "path": "now.md",
       "name": "now.md",
-      "size": "83B",
+      "size": "219B",
       "type": "markdown",
-      "contents": "<p>self-learning</p>\n<p>typing on <a href=\"https://github.com/carrefinho/visorbearer\">visorbearer</a>.</p>\n",
+      "contents": "<p>self-learning</p>\n<p>typing on <a href=\"https://github.com/carrefinho/visorbearer\">visorbearer</a>. </p>\n<p><a href=\"https://cooper.edu/continuing-education/courses/datacooper/vc0226\">Visualizing the City-Interactive Data Stories with NYC Open Data</a></p>\n",
       "location": {
         "x": 255,
         "y": 393
@@ -60,12 +60,12 @@
     {
       "path": "soon.md",
       "name": "soon.md",
-      "size": "310B",
+      "size": "88B",
       "type": "markdown",
-      "contents": "<p><a href=\"https://withfriends.events/event/IfGKzXyY/wordhack/\">WordHack - Feb 19</a><br>\n<a href=\"https://withfriends.events/event/5XLrJ6Bj/web4-season-2/\">Web4: The Offline Rabbit Hole - Feb 26</a></p>\n<p><a href=\"https://cooper.edu/continuing-education/courses/datacooper/vc0226\">Visualizing the City-Interactive Data Stories with NYC Open Data</a></p>\n",
+      "contents": "<p><a href=\"https://sfpc.study/sessions/spring-26/digital-decay\">SFPC: Digital Decay &amp; Afterlives</a></p>\n",
       "location": {
-        "x": 254,
-        "y": 487
+        "x": 258,
+        "y": 534
       }
     },
     {
@@ -92,7 +92,7 @@
       "path": "statuses/",
       "name": "statuses/",
       "type": "directory",
-      "contents": "15 items",
+      "contents": "19 items",
       "location": {
         "x": 730,
         "y": 143
