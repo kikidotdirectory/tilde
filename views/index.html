@@ -5,15 +5,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>tilde/views/</title>
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <meta name="author" content="tilde">
-  <meta name="description" content="tilde.kiki.directory is a site sown from files and directories.">
-  <link rel="stylesheet" href="/style.css">
+  <title>file.gallery/views/</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="author" content="file.gallery">
+  <meta name="description" content="file.gallery is a site sown from files and directories.">
 
   <style>
     html, body {
-      height: 100%;
       margin: 0;
       text-size-adjust: none;
       -webkit-text-size-adjust: 100%;
@@ -24,33 +22,22 @@
       overflow-x: scroll;
     }
     main {
-      max-width: 100%;
       box-sizing: border-box;
-      align-items: center;
       padding: 1.5em;
     }
-    .plantbed {
-      width: 0;
-      position: relative;
-    }
     .item {
-      display: block;
-      position: absolute;
-      padding: 0.25em 1em;
-      outline: 1px solid rgba(0,0,0,0.1);
-      z-index: 1;
+      display: inline-block;
+      padding: 0em 1em;
+      margin: 1em 0;
+      border: 1px solid rgba(0,0,0,.1);
+      max-width: 30em;
     }
-    .item * {
-      width: max-content;
-    }
-    .item img, .item video, .item audio {
-      max-width: 18em;
-      height: auto;
-    }
-    .item:has(img) {
-      z-index: 0;
+    .item img, .item video {
+      width: auto; height: auto;
+      max-width: 24em; max-height: 26em;
     }
     .item audio {
+      max-width: 18em;
       height: 3em;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -70,7 +57,6 @@
     }
     .md h1, .md h2, .md h3, .md h4, .md h5, .md h6, .md p, .md pre {
       margin-top: 1em;
-      max-width: 34ch;
     }
   </style>
 </head>
@@ -79,31 +65,22 @@
   <main>
     <h3><a href="..">back</a></h3>
     <p>views/</p>
-
-    <div class="plantbed" style="left: max(0px, calc(50% - 76px - 9em))">
-      <div class="item" style="top: 139px; left: 0px">
-        <h3><a href="formal.ejs">formal.ejs</a> (4.26kB)</h3>
+    
+    <div class="plantbed">
+      <div class="item">
+        <h3><a href="formal.ejs">formal.ejs</a> (4.2kB)</h3>
       </div>
-      <div class="item" style="top: 50px; left: 152px">
-        <h3><a href="natural.ejs">natural.ejs</a> (4.89kB)</h3>
+      <div class="item">
+        <h3><a href="natural.ejs">natural.ejs</a> (4.48kB)</h3>
       </div>
     </div>
+
   </main>
-  <script>
-    <!--this snippet was borrowed from ryanyan.garden. thank you! -->
-    let currentZIndex = 1;
-    document.querySelectorAll('.item').forEach(item => {
-      item.addEventListener('mouseenter', () => {
-        currentZIndex++;
-        item.style.zIndex = currentZIndex;
-      });
-    });
-  </script>
 </body>
 <!--
-kevin.garden (natural template) by Kevin Chen, 2023-2025
+kevin.garden (formal template) by Kevin Chen, 2023-26
 licensed under CC BY-NC 4.0: https://creativecommons.org/licenses/by-nc/4.0/
-please link to https://kevin.garden/ or https://file.gallery/, if possible
+please link to https://kevin.garden/ or https://file.gallery/, if possible.
 attribution only in the html source is sufficient. non-commercial use only :)
 -->
 </html>
