@@ -1,6 +1,9 @@
 {
   "scripts": {
-    "cultivate": "node src/cultivate.js ."
+    "cultivate": "node src/cultivate.js .",
+    "watch": "fswatch -o --exclude='index\\.html$' --exclude='node_modules' . | while read change; do npm run cultivate; done",
+    "serve": "live-server",
+    "dev": "concurrently \"npm run watch\" \"npm run serve\""
   },
   "repository": {
     "type": "git",
@@ -17,5 +20,8 @@
     "parse-gitignore": "^2.0.0",
     "pretty-bytes": "^6.1.0"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "concurrently": "^10.0.4"
+  }
 }
