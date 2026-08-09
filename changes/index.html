@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>tilde/changes/</title>
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <meta name="author" content="tilde">
-  <meta name="description" content="tilde.kiki.directory is a site sown from files and directories.">
-  <link rel="stylesheet" href="/style.css">
+  <title>file.gallery/changes/</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="author" content="file.gallery">
+  <meta name="description" content="file.gallery is a site sown from files and directories.">
+
   <style>
     html, body {
       margin: 0;
@@ -27,14 +27,14 @@
     }
     .item {
       display: inline-block;
-      position: relative;
-      padding: 0.25em 1em;
+      padding: 0em 1em;
       margin: 1em 0;
       border: 1px solid rgba(0,0,0,.1);
+      max-width: 30em;
     }
     .item img, .item video {
       width: auto; height: auto;
-      max-width: 28em; max-height: 26em;
+      max-width: 24em; max-height: 26em;
     }
     .item audio {
       max-width: 18em;
@@ -68,17 +68,15 @@
     
     <div class="plantbed">
       <div class="item">
-        <h3><a href="changes.md">changes.md</a> (178B)</h3>
+        <h3><a href="_garden_store.md">_garden_store.md</a> (1.18kB)</h3>
         <div class="md">
-          <p>this directory serves as a list of changes i&#39;ve made to my version of <a href="file.gallery">file.gallery</a>. i have it here for my own documentation but i hope you find it interesting :)</p>
-        </div>
-      </div>
-      <div class="item">
-        <h3><a href="_markdown.md">_markdown.md</a> (25B)</h3>
-        <div class="md">
-          <ul>
-<li>add max width for text</li>
-</ul>
+          <p>inspired by the .DS_Store that file.gallery is built on</p>
+<p>currently, file.gallery has no way of knowing how files should be ordered semantically. the current implementation organizes them alphanumerically which is works for formal compositions but results in a nonintuitive DOM for natural layouts</p>
+<p><code>.garden_store.json</code> allows file.gallery to remember the intended DOM order of files and directories. the json stores a sort-order for each directory along with a copy of the processedFiles array used in cultivate.js. </p>
+<p>by default, it will retain the alphanumeric order and simply be rewritten everytime <code>npm run cultivate</code> is run but if <code>sort-order</code> is set to <code>custom</code>, it will respect the order that is set, adding new items to the end and removing items that are no longer visible to cultivate.js.</p>
+<h1>todo</h1>
+<p>i plan to add some additional filters that can be set like reverse-alpha or date. i&#39;m not sure if that can be done through finder itself but this was the best solution i could think of to set semantic ordering, which was my priority</p>
+<p>i want to make a gui that allows for things like adding aria labels, rearranging the order of the items, or adding custom attributes.</p>
         </div>
       </div>
       <div class="item">
@@ -92,15 +90,17 @@
         </div>
       </div>
       <div class="item">
-        <h3><a href="_garden_store.md">_garden_store.md</a> (1.18kB)</h3>
+        <h3><a href="_markdown.md">_markdown.md</a> (25B)</h3>
         <div class="md">
-          <p>inspired by the .DS_Store that file.gallery is built on</p>
-<p>currently, file.gallery has no way of knowing how files should be ordered semantically. the current implementation organizes them alphanumerically which is works for formal compositions but results in a nonintuitive DOM for natural layouts</p>
-<p><code>.garden_store.json</code> allows file.gallery to remember the intended DOM order of files and directories. the json stores a sort-order for each directory along with a copy of the processedFiles array used in cultivate.js. </p>
-<p>by default, it will retain the alphanumeric order and simply be rewritten everytime <code>npm run cultivate</code> is run but if <code>sort-order</code> is set to <code>custom</code>, it will respect the order that is set, adding new items to the end and removing items that are no longer visible to cultivate.js.</p>
-<h1>todo</h1>
-<p>i plan to add some additional filters that can be set like reverse-alpha or date. i&#39;m not sure if that can be done through finder itself but this was the best solution i could think of to set semantic ordering, which was my priority</p>
-<p>i want to make a gui that allows for things like adding aria labels, rearranging the order of the items, or adding custom attributes.</p>
+          <ul>
+<li>add max width for text</li>
+</ul>
+        </div>
+      </div>
+      <div class="item">
+        <h3><a href="changes.md">changes.md</a> (178B)</h3>
+        <div class="md">
+          <p>this directory serves as a list of changes i&#39;ve made to my version of <a href="file.gallery">file.gallery</a>. i have it here for my own documentation but i hope you find it interesting :)</p>
         </div>
       </div>
     </div>
@@ -108,9 +108,9 @@
   </main>
 </body>
 <!--
-kevin.garden (formal template) by Kevin Chen, 2023-2025
+kevin.garden (formal template) by Kevin Chen, 2023-26
 licensed under CC BY-NC 4.0: https://creativecommons.org/licenses/by-nc/4.0/
-please link to https://kevin.garden/ or https://file.gallery/, if possible
+please link to https://kevin.garden/ or https://file.gallery/, if possible.
 attribution only in the html source is sufficient. non-commercial use only :)
 -->
 </html>
