@@ -239,97 +239,6 @@ async function cultivateFile(fileName, currPath) {
 }
 
 /**
- * Loads .garden_store.json from the given path, or creates it with default settings if not found.
- *
- * @param {string} currPath - The directory path to load/create the garden store in
- * @param {Array} processedFiles - Default files to use if creating a new garden store
- * @returns {object} The garden store configuration object
- */
-async function loadOrCreateGardenStore(currPath, processedFiles) {
-  const gardenStorePath = path.join(currPath, ".garden_store.json");
-
-  try {
-    return JSON.parse(await fs.readFile(gardenStorePath, "utf-8"));
-  } catch (err) {
-    if (err.code === 'ENOENT') {
-      const defaultStore = {
-        "sort_order": "alphanumeric",
-        "files": processedFiles
-      };
-      await fs.writeFile(gardenStorePath, JSON.stringify(defaultStore, null, 2));
-      console.log("Created .garden_store.json with default settings");
-      return defaultStore;
-    }
-    throw err;
-  }
-}
-
-/**
- * Synchronizes the custom sort order from the garden store with current files.
- * Updates existing files in place, appends new files, and removes deleted files.
- *
- * @param {Array} storedFiles - Files array from the garden store with custom order
- * @param {Array} currentFiles - Currently processed files from the filesystem
- * @returns {Array} The synchronized file list in custom order
- */
-async function syncCustomOrder(storedFiles, currentFiles) {
-  // Track which stored file indices haven't been matched yet (these are deleted files)
-  const indicesToRemove = storedFiles.map((_, i) => i);
-
-  currentFiles.forEach((processedFile) => {
-    const existingIndex = storedFiles.findIndex(
-      (storeFile) => storeFile.path === processedFile.path
-    );
-
-    if (existingIndex !== -1) {
-      // File exists in store - update it with fresh data
-      storedFiles[existingIndex] = processedFile;
-
-      // Mark this index as still valid (not deleted)
-      const indexInArray = indicesToRemove.indexOf(existingIndex);
-      if (indexInArray !== -1) {
-        indicesToRemove.splice(indexInArray, 1);
-      }
-    } else {
-      // New file not in store - append to end
-      storedFiles.push(processedFile);
-    }
-  });
-
-  // Remove deleted files (in reverse to avoid index shifting)
-  indicesToRemove.sort((a, b) => b - a).forEach((index) => {
-    storedFiles.splice(index, 1);
-  });
-
-  return storedFiles;
-}
-
-/**
- * Applies the specified sort order to the processed files.
- *
- * @param {string} currPath - The directory path for saving updated garden store
- * @param {object} gardenStore - The garden store configuration
- * @param {Array} processedFiles - Files to sort
- * @returns {Array} The sorted file list
- */
-async function applySortOrder(currPath, gardenStore, processedFiles) {
-  switch (gardenStore.sort_order) {
-    case "custom":
-      const sortedFiles = syncCustomOrder(gardenStore.files, processedFiles);
-      // Persist the updated file order back to the garden store
-      await fs.writeFile(
-        path.join(currPath, ".garden_store.json"),
-        JSON.stringify(gardenStore, null, 2)
-      );
-      return sortedFiles;
-    case "alphanumeric":
-    default:
-      return processedFiles.sort((a, b) => a.name.localeCompare(b.name));
-  }
-}
-
-
-/**
  * :house_with_garden:
  */
 async function cultivate(rootPath, relativePath = '.', currDir = '', icvp = null, depth = 3) {
@@ -415,14 +324,6 @@ async function cultivate(rootPath, relativePath = '.', currDir = '', icvp = null
     })
   ]);
 
-  const useGardenStore = true;
-
-  if (useGardenStore) {
-    const gardenStore = await loadOrCreateGardenStore(currPath, processedFiles);
-    processedFiles = await applySortOrder(currPath, gardenStore, processedFiles);
-  } else {
-    processedFiles.sort((a, b) => a.name.localeCompare(b.name));
-  }
 
   dirData.files = processedFiles;
 
